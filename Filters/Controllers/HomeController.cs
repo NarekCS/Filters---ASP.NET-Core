@@ -8,10 +8,13 @@ using System.Threading.Tasks;
 
 namespace Filters.Controllers
 {
-    [HttpsOnly]
-    [Profile]
-    [ViewResultDetails]
-    [RangeException]
+    //[HttpsOnly]
+    //[Profile]
+    //[ViewResultDetails]
+    //[RangeException]
+    [TypeFilter(typeof(DiagnosticsFilter))]
+    //[TypeFilter(typeof(TimeFilter))]
+    [ServiceFilter(typeof(TimeFilter))]
     public class HomeController : Controller
     {        
         public ViewResult Index() => View("Message", "This is the Index action on the Home controller");

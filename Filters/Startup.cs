@@ -29,6 +29,7 @@ namespace Filters
                         {
                             options.Filters.AddService(typeof(ViewResultDiagnostics));
                             options.Filters.AddService(typeof(DiagnosticsFilter));
+                            options.Filters.Add(new MessageAttribute("This is the Globally-Scoped Filter"));
                         });
         }
 
